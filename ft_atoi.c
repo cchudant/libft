@@ -1,21 +1,21 @@
 #include "libft.h"
 
-int		ft_atoi(char *str)
+int		ft_atoi(const char *str)
 {
 	int res;
 	int mul;
 
 	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
 		str++;
-	mul = 0;
+	mul = 1;
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-			mul = 0;
+			mul = -1;
 		str++;
 	}
 	res = 0;
-	while (*str)
+	while (*str >= '0' && *str <= '9')
 	{
 		res = res * 10 + *str - '0';
 		str++;
