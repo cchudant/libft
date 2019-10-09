@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 10:39:41 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/09 10:54:33 by cchudant         ###   ########.fr       */
+/*   Created: 2019/10/09 12:37:19 by cchudant          #+#    #+#             */
+/*   Updated: 2019/10/09 12:42:00 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(void *))
 {
-	size_t i;
+	t_list *tmp;
+	t_list *new_lst;
+	t_list *current_node;
 
-	i = 0;
-	while (src[i] && size > 1 + i)
+	new_lst = NULL;
+	current_node = NULL;
+	while (lst)
 	{
-		dst[i] = src[i];
-		i++;
+		if (!(tmp = (*f)(lst->content)))
+			return (NULL);
+		if (!new_lst)
+			new_lst = tmp;
+		else
+			current_node->next = tmp;
+		current_node = tmp;
+		lst = lst->next;
 	}
-	if (size > i)
-		dst[i] = '\0';
-	while (src[i])
-		i++;
-	return (i);
+	return (new_lst);
 }

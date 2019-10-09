@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/09 13:03:05 by cchudant          #+#    #+#             */
+/*   Updated: 2019/10/09 13:03:07 by cchudant         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	ft_split_u(const char *s, char c)
 {
-	const char	*begin_match;
+	char const	*begin_match;
 	size_t		u;
 
 	begin_match = s;
@@ -12,19 +24,16 @@ static size_t	ft_split_u(const char *s, char c)
 		if (*s == c)
 		{
 			u++;
-			begin_match = s;
+			begin_match = s + 1;
 		}
 		s++;
 	}
-	if (*s == c)
-	{
-		u++;
-		begin_match = s;
-	}
+	u++;
 	return (u);
 }
 
-static char		*ft_split_one(char **tab, size_t *split_i, const char *s, size_t len)
+static char		*ft_split_one(char **tab, size_t *split_i,
+		char const *s, size_t len)
 {
 	char	*res;
 	size_t	i;
@@ -43,9 +52,10 @@ static char		*ft_split_one(char **tab, size_t *split_i, const char *s, size_t le
 	return (res);
 }
 
-static char		**ft_split_inn(char **tab, size_t *split_i, const char *s, char c)
+static char		**ft_split_inn(char **tab, size_t *split_i,
+		char const *s, char c)
 {
-	const char *begin_match;
+	char const *begin_match;
 
 	begin_match = s;
 	while (*s)
@@ -54,20 +64,16 @@ static char		**ft_split_inn(char **tab, size_t *split_i, const char *s, char c)
 		{
 			if (!ft_split_one(tab, split_i, begin_match, s - begin_match))
 				return (NULL);
-			begin_match = s;
+			begin_match = s + 1;
 		}
 		s++;
 	}
-	if (*s == c)
-	{
-		if (!ft_split_one(tab, split_i, begin_match, s - begin_match))
-			return (NULL);
-		begin_match = s;
-	}
+	if (!ft_split_one(tab, split_i, begin_match, s - begin_match))
+		return (NULL);
 	return (tab);
 }
 
-char			**ft_split(const char *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	**tab;
 	size_t	split_i;
