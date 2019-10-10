@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 13:03:05 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/09 13:03:07 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/10/10 11:39:47 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,14 @@ static size_t	ft_split_u(const char *s, char c)
 	{
 		if (*s == c)
 		{
-			u++;
+			if (begin_match != s)
+				u++;
 			begin_match = s + 1;
 		}
 		s++;
 	}
-	u++;
+	if (begin_match != s)
+		u++;
 	return (u);
 }
 
@@ -62,13 +64,15 @@ static char		**ft_split_inn(char **tab, size_t *split_i,
 	{
 		if (*s == c)
 		{
-			if (!ft_split_one(tab, split_i, begin_match, s - begin_match))
+			if (begin_match != s &&
+					!ft_split_one(tab, split_i, begin_match, s - begin_match))
 				return (NULL);
 			begin_match = s + 1;
 		}
 		s++;
 	}
-	if (!ft_split_one(tab, split_i, begin_match, s - begin_match))
+	if (begin_match != s &&
+			!ft_split_one(tab, split_i, begin_match, s - begin_match))
 		return (NULL);
 	return (tab);
 }

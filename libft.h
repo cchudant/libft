@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 13:03:24 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/09 13:03:39 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/10/10 12:42:13 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 
 void				ft_bzero(void *s, size_t n);
+int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
