@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:33:50 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/09 12:57:44 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/10/12 10:36:15 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	{
 		next = &(*lst)->next;
 		tmp = *lst;
+		(*del)((*lst)->content);
 		*lst = NULL;
-		ft_lstdelone(tmp, del);
+		free(tmp);
 		lst = next;
 	}
 }
