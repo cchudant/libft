@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:13:31 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/09 12:21:09 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/10/15 15:13:35 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int		b;
+	int b;
 
 	if (n < 0)
 		ft_putchar_fd('-', fd);
