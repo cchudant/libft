@@ -10,7 +10,7 @@ NAME=libft.a
 all: $(NAME)
 
 bonus: $(HEADERS) $(OBJECTS) $(BONUS_OBJECTS)
-	ar rc $(NAME_BONUS) $(OBJECTS) $(BONUS_OBJECTS)
+	ar rc $(NAME) $(OBJECTS) $(BONUS_OBJECTS)
 
 $(NAME): $(HEADERS) $(OBJECTS)
 	ar rc $(NAME) $(OBJECTS)
