@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:37:12 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/09 12:57:09 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/10/17 14:16:27 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst)
 	{
-		(*f)(lst->content);
+		if (f)
+			(*f)(lst->content);
 		lst = lst->next;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:27:27 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/09 12:27:29 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/10/17 14:13:00 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	new->next = *alst;
-	*alst = new;
+	if (new)
+	{
+		new->next = *alst;
+		*alst = new;
+	}
 }

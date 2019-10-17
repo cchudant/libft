@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:33:50 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/12 10:36:15 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/10/17 14:15:29 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	{
 		next = &(*lst)->next;
 		tmp = *lst;
-		(*del)((*lst)->content);
+		if (del)
+			(*del)((*lst)->content);
 		*lst = NULL;
 		free(tmp);
 		lst = next;

@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:37:19 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/12 10:34:16 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/10/17 14:17:25 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *))
 	{
 		if (!(tmp = malloc(sizeof(t_list))))
 			return (NULL);
-		tmp->content = (*f)(lst->content);
+		if (f)
+			tmp->content = (*f)(lst->content);
+		else
+			tmp->content = lst->content;
 		tmp->next = NULL;
 		if (!new_lst)
 			new_lst = tmp;
