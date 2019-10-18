@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:31:54 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/17 14:15:12 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/10/18 15:34:57 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst && del)
+	if (lst)
 	{
-		(*del)(lst->content);
+		if (del)
+			(*del)(lst->content);
 		free(lst);
 	}
 }
