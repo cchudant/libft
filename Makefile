@@ -5,6 +5,7 @@ OBJECTS=srcs/ft_memset.o srcs/ft_bzero.o srcs/ft_memcpy.o srcs/ft_memccpy.o srcs
 OBJECTS+=srcs/lst/ft_lstnew.o srcs/lst/ft_lstadd_front.o srcs/lst/ft_lstsize.o srcs/lst/ft_lstlast.o srcs/lst/ft_lstadd_back.o srcs/lst/ft_lstdelone.o srcs/lst/ft_lstclear.o srcs/lst/ft_lstiter.o srcs/lst/ft_lstmap.o
 OBJECTS+=srcs/math/ft_ceil.o srcs/math/ft_floor.o srcs/math/ft_isnan.o srcs/math/ft_isninf.o srcs/math/ft_isninf.o srcs/math/ft_ispinf.o
 OBJECTS+=srcs/vec/abs.o srcs/vec/add.o srcs/vec/addv.o srcs/vec/div.o srcs/vec/from.o srcs/vec/inv.o srcs/vec/mul.o srcs/vec/mulv.o srcs/vec/new.o
+OBJECTS+=srcs/get_next_line/get_next_line.o srcs/get_next_line/get_next_line_utils.o
 NAME=libft.a
 
 .PHONY: all clean fclean re
