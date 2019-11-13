@@ -1,20 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   add.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 10:55:23 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/15 15:04:16 by cchudant         ###   ########.fr       */
+/*   Created: 2019/10/26 14:25:31 by cchudant          #+#    #+#             */
+/*   Updated: 2019/10/26 14:26:56 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "vec.h"
 
-int		ft_isalnum(int c)
+t_vec2d			vec2d_add(t_vec2d v, double p)
 {
-	return ((c >= '0' && c <= '9') ||
-			(c >= 'a' && c <= 'z') ||
-			(c >= 'A' && c <= 'Z'));
+	v.x += p;
+	v.y += p;
+	return (v);
 }
+
+t_vec2i			vec2i_add(t_vec2i v, int p)
+{
+	v.x += p;
+	v.y += p;
+	return (v);
+}
+
+t_vec3d			vec3d_add(t_vec3d v, double p)
+{
+	v.x += p;
+	v.y += p;
+	v.z += p;
+	return (v);
+}
+
+t_vec3i			vec3i_add(t_vec3i v, int p)
+{
+	v.x += p;
+	v.y += p;
+	v.z += p;
+	return (v);
+}
+

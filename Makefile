@@ -1,16 +1,15 @@
 CC=gcc
-CFLAGS=-Wall -Wextra -Werror -I.
-HEADERS=libft.h
-OBJECTS=ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
-BONUS_OBJECTS=ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
+CFLAGS=-Wall -Wextra -Werror -Iincludes
+HEADERS=includes/libft.h includes/bool.h includes/color.h includes/get_next_line.h includes/lst.h includes/math.h includes/vec.h
+OBJECTS=srcs/ft_memset.o srcs/ft_bzero.o srcs/ft_memcpy.o srcs/ft_memccpy.o srcs/ft_memmove.o srcs/ft_memchr.o srcs/ft_memcmp.o srcs/ft_strlen.o srcs/ft_strlcpy.o srcs/ft_strlcat.o srcs/ft_strchr.o srcs/ft_strrchr.o srcs/ft_strnstr.o srcs/ft_strncmp.o srcs/ft_atoi.o srcs/ft_isalpha.o srcs/ft_isdigit.o srcs/ft_isalnum.o srcs/ft_isascii.o srcs/ft_isprint.o srcs/ft_toupper.o srcs/ft_tolower.o srcs/ft_calloc.o srcs/ft_strdup.o srcs/ft_substr.o srcs/ft_strjoin.o srcs/ft_strtrim.o srcs/ft_split.o srcs/ft_itoa.o srcs/ft_strmapi.o srcs/ft_putchar_fd.o srcs/ft_putstr_fd.o srcs/ft_putendl_fd.o srcs/ft_putnbr_fd.o
+OBJECTS+=srcs/lst/ft_lstnew.o srcs/lst/ft_lstadd_front.o srcs/lst/ft_lstsize.o srcs/lst/ft_lstlast.o srcs/lst/ft_lstadd_back.o srcs/lst/ft_lstdelone.o srcs/lst/ft_lstclear.o srcs/lst/ft_lstiter.o srcs/lst/ft_lstmap.o
+OBJECTS+=srcs/math/ft_ceil.o srcs/math/ft_floor.o srcs/math/ft_isnan.o srcs/math/ft_isninf.o srcs/math/ft_isninf.o srcs/math/ft_ispinf.o
+OBJECTS+=srcs/vec/abs.o srcs/vec/add.o srcs/vec/addv.o srcs/vec/div.o srcs/vec/from.o srcs/vec/inv.o srcs/vec/mul.o srcs/vec/mulv.o srcs/vec/new.o
 NAME=libft.a
 
-.PHONY: all clean fclean re bonus re_bonus
+.PHONY: all clean fclean re
 
 all: $(NAME)
-
-bonus: $(HEADERS) $(OBJECTS) $(BONUS_OBJECTS)
-	ar rc $(NAME) $(OBJECTS) $(BONUS_OBJECTS)
 
 $(NAME): $(HEADERS) $(OBJECTS)
 	ar rc $(NAME) $(OBJECTS)
@@ -22,5 +21,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-re_bonus: fclean bonus

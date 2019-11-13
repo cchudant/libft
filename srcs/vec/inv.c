@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   inv.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 12:11:24 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/09 12:57:45 by cchudant         ###   ########.fr       */
+/*   Created: 2019/10/26 14:34:52 by cchudant          #+#    #+#             */
+/*   Updated: 2019/10/26 14:37:28 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "vec.h"
 
-void	ft_putchar_fd(char c, int fd)
+t_vec2d			vec2d_inv(t_vec2d v)
 {
-	write(fd, &c, 1);
+	v.x = 1 / v.x;
+	v.y = 1 / v.y;
+	return (v);
+}
+
+t_vec3d			vec3d_inv(t_vec3d v)
+{
+	v.x = 1 / v.x;
+	v.y = 1 / v.y;
+	v.z = 1 / v.z;
+	return (v);
 }

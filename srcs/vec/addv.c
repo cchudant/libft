@@ -1,18 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   addv.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 10:55:32 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/09 10:55:43 by cchudant         ###   ########.fr       */
+/*   Created: 2019/10/26 14:27:34 by cchudant          #+#    #+#             */
+/*   Updated: 2019/10/26 14:28:31 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "vec.h"
 
-int		ft_isascii(int c)
+t_vec2d			vec2d_addv(t_vec2d v, t_vec2d p)
 {
-	return (c >= 0 && c <= 0177);
+	v.x += p.x;
+	v.y += p.y;
+	return (v);
 }
+
+t_vec2i			vec2i_addv(t_vec2i v, t_vec2i p)
+{
+	v.x += p.x;
+	v.y += p.y;
+	return (v);
+}
+
+t_vec3d			vec3d_addv(t_vec3d v, t_vec3d p)
+{
+	v.x += p.x;
+	v.y += p.y;
+	v.z += p.z;
+	return (v);
+}
+
+t_vec3i			vec3i_addv(t_vec3i v, t_vec3i p)
+{
+	v.x += p.x;
+	v.y += p.y;
+	v.z += p.z;
+	return (v);
+}
+
