@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   math.h                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/14 13:39:44 by cchudant          #+#    #+#             */
+/*   Updated: 2019/11/14 13:46:24 by cchudant         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef MATH_H
 # define MATH_H
@@ -13,7 +24,7 @@
 # endif
 
 # ifndef ABS
-#  define ABS(X) ({ typeof(X) x=(X); x<0?-x:x })
+#  define ABS(X) ({ typeof(X) x=(X); x<0?-x:x; })
 # endif
 
 typedef union	u_reinterpret_double

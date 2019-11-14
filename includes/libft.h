@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 13:03:24 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/18 15:36:41 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/11/14 13:40:29 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+# include "bool.h"
 # include "math.h"
 # include "vec.h"
 # include "color.h"

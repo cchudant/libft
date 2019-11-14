@@ -6,12 +6,14 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 17:08:20 by cchudant          #+#    #+#             */
-/*   Updated: 2019/10/26 15:41:49 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/11/14 13:45:43 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef VEC_H
 # define VEC_H
+
+# include "math.h"
 
 typedef struct	s_vec2d {
 	double		x;
@@ -39,11 +41,6 @@ t_vec2d			vec2d_from(t_vec2i v);
 t_vec2i			vec2i_from(t_vec2d v);
 t_vec3d			vec3d_from(t_vec3i v);
 t_vec3i			vec3i_from(t_vec3d v);
-
-t_vec2d			vec2d_new(double x, double y);
-t_vec2i			vec2i_new(int x, int y);
-t_vec3d			vec3d_new(double x, double y, double z);
-t_vec3i			vec3i_new(int x, int y, int z);
 
 t_vec2d			vec2d_add(t_vec2d v, double p);
 t_vec2i			vec2i_add(t_vec2i v, int p);

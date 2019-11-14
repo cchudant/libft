@@ -1,7 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_floor.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/14 13:39:05 by cchudant          #+#    #+#             */
+/*   Updated: 2019/11/14 13:42:16 by cchudant         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "math.h"
 
 long long	ft_floor(double x)
 {
-    long long xi = (long long)x;
-    return (x < xi ? xi - 1 : xi);
+	long long xi;
+
+	xi = (long long)x;
+	return (x < xi ? xi - 1 : xi);
 }
