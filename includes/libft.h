@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 13:03:24 by cchudant          #+#    #+#             */
-/*   Updated: 2019/11/14 13:40:29 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/11/14 14:05:35 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@
 # include "color.h"
 # include "lst.h"
 # include "get_next_line.h"
-
-# ifndef NULL
-#  define NULL (0)
-# endif
+# include "wchar.h"
 
 # ifndef EXIT_FAILURE
 #  define EXIT_FAILURE (1)
