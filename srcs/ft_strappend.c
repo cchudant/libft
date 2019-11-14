@@ -6,13 +6,13 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 14:18:55 by cchudant          #+#    #+#             */
-/*   Updated: 2019/11/14 14:26:04 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/11/14 14:50:48 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strappend(char **dest, char const *s)
+t_bool	ft_strappend(char **dest, char const *s)
 {
 	size_t	i;
 	size_t	j;
@@ -26,7 +26,7 @@ void	ft_strappend(char **dest, char const *s)
 	{
 		free(*dest);
 		*dest = NULL;
-		return ;
+		return (FALSE);
 	}
 	i = 0;
 	j = 0;
@@ -38,4 +38,5 @@ void	ft_strappend(char **dest, char const *s)
 	str[i] = '\0';
 	free(*dest);
 	*dest = str;
+	return (TRUE);
 }
