@@ -13,6 +13,7 @@ OBJECTS=srcs/ft_memset.o srcs/ft_bzero.o srcs/ft_memcpy.o srcs/ft_memccpy.o \
 	srcs/ft_substr.o srcs/ft_strjoin.o srcs/ft_strtrim.o srcs/ft_split.o \
 	srcs/ft_itoa.o srcs/ft_strmapi.o srcs/ft_putchar_fd.o srcs/ft_putstr_fd.o \
 	srcs/ft_putendl_fd.o srcs/ft_putnbr_fd.o
+OBJECTS+=srcs/ft_strappend.o
 OBJECTS+=srcs/lst/ft_lstnew.o srcs/lst/ft_lstadd_front.o \
 	srcs/lst/ft_lstsize.o srcs/lst/ft_lstlast.o srcs/lst/ft_lstadd_back.o \
 	srcs/lst/ft_lstdelone.o srcs/lst/ft_lstclear.o srcs/lst/ft_lstiter.o \
