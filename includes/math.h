@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 13:39:44 by cchudant          #+#    #+#             */
-/*   Updated: 2019/11/14 13:46:24 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/11/15 09:01:26 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 # include "bool.h"
 
 # ifndef MAX
-#  define MAX(X, Y) ({ typeof(X) x=(X); typeof(Y) y=(Y); (x<y)?x:y; })
+#  define MAX(X, Y) ({ typeof(X) x=(X); typeof(Y) y=(Y); (x>y)?x:y; })
 # endif
 
 # ifndef MIN
-#  define MIN(X, Y) ({ typeof(X) x=(X); typeof(Y) y=(Y); (x>y)?x:y; })
+#  define MIN(X, Y) ({ typeof(X) x=(X); typeof(Y) y=(Y); (x<y)?x:y; })
 # endif
 
 # ifndef ABS
