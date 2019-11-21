@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 13:03:24 by cchudant          #+#    #+#             */
-/*   Updated: 2019/11/15 05:55:45 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/11/18 17:46:57 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ t_bool				ft_strappend(char **dest, char const *s);
 t_bool				ft_str_endswith(const char *str, const char *end);
 t_bool				ft_str_startswith(const char *str, const char *start);
 int					ft_char_count(const char *s, char c);
+int					ft_strcmp(const char *s1, const char *s2);
 
 #endif
