@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -Iincludes
+CFLAGS = -g -Wall -Wextra -Werror -Iincludes -flto -O3 #-fsanitize=address
 NAME = libft.a
 HEADERS = includes/libft.h includes/bool.h includes/color.h \
 	includes/get_next_line.h includes/lst.h includes/math.h includes/vec.h \
@@ -22,7 +22,9 @@ OBJECTS += srcs/lst/ft_lstnew.o srcs/lst/ft_lstadd_front.o \
 OBJECTS += srcs/math/ft_ceil.o srcs/math/ft_floor.o srcs/math/ft_isnan.o \
 	srcs/math/ft_isninf.o srcs/math/ft_isninf.o srcs/math/ft_ispinf.o
 OBJECTS += srcs/vec/abs.o srcs/vec/add.o srcs/vec/addv.o srcs/vec/div.o \
-	srcs/vec/from.o srcs/vec/inv.o srcs/vec/mul.o srcs/vec/mulv.o
+	srcs/vec/from.o srcs/vec/inv.o srcs/vec/mul.o srcs/vec/mulv.o \
+	srcs/vec/sub.o srcs/vec/subv.o srcs/vec/min.o srcs/vec/minv.o \
+	srcs/vec/max.o srcs/vec/maxv.o srcs/vec/divv.o
 OBJECTS += srcs/get_next_line/get_next_line.o \
 	srcs/get_next_line/get_next_line_utils.o
 OBJECTS += srcs/wchar/ft_wcharlen.o srcs/wchar/ft_wstrlen.o \
