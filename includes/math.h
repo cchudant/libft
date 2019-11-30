@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 13:39:44 by cchudant          #+#    #+#             */
-/*   Updated: 2019/11/15 09:01:26 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/11/30 16:42:26 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,19 @@
 
 # include "bool.h"
 
-# ifndef MAX
-#  define MAX(X, Y) ({ typeof(X) x=(X); typeof(Y) y=(Y); (x>y)?x:y; })
-# endif
-
-# ifndef MIN
-#  define MIN(X, Y) ({ typeof(X) x=(X); typeof(Y) y=(Y); (x<y)?x:y; })
-# endif
-
-# ifndef ABS
-#  define ABS(X) ({ typeof(X) x=(X); x<0?-x:x; })
-# endif
-
 typedef union	u_reinterpret_double
 {
 	double		d;
 	long long	ll;
 }				t_reinterpret_double;
+
+int				ft_abs(int v);
+int				ft_min(int a, int b);
+int				ft_max(int a, int b);
+
+double			ft_absd(double v);
+double			ft_mind(double a, double b);
+double			ft_maxd(double a, double b);
 
 long long		ft_floor(double x);
 long long		ft_ceil(double x);

@@ -6,7 +6,7 @@
 /*   By: cchudant <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 14:51:41 by cchudant          #+#    #+#             */
-/*   Updated: 2019/11/14 14:53:17 by cchudant         ###   ########.fr       */
+/*   Updated: 2019/11/30 16:45:14 by cchudant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		rgb_to_int(t_vec3i rgb)
 {
-	return (MIN(ABS(rgb.x), 255) << 16 |
-			MIN(ABS(rgb.y), 255) << 8 |
-			MIN(ABS(rgb.z), 255));
+	return (ft_min(ft_abs(rgb.x), 255) << 16 |
+			ft_min(ft_abs(rgb.y), 255) << 8 |
+			ft_min(ft_abs(rgb.z), 255));
 }

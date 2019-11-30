@@ -20,7 +20,8 @@ OBJECTS += srcs/lst/ft_lstnew.o srcs/lst/ft_lstadd_front.o \
 	srcs/lst/ft_lstdelone.o srcs/lst/ft_lstclear.o srcs/lst/ft_lstiter.o \
 	srcs/lst/ft_lstmap.o
 OBJECTS += srcs/math/ft_ceil.o srcs/math/ft_floor.o srcs/math/ft_isnan.o \
-	srcs/math/ft_isninf.o srcs/math/ft_isninf.o srcs/math/ft_ispinf.o
+	srcs/math/ft_isninf.o srcs/math/ft_isninf.o srcs/math/ft_ispinf.o \
+	srcs/math/ft_abs.o srcs/math/ft_min.o srcs/math/ft_max.o
 OBJECTS += srcs/vec/abs.o srcs/vec/add.o srcs/vec/addv.o srcs/vec/div.o \
 	srcs/vec/from.o srcs/vec/inv.o srcs/vec/mul.o srcs/vec/mulv.o \
 	srcs/vec/sub.o srcs/vec/subv.o srcs/vec/min.o srcs/vec/minv.o \
